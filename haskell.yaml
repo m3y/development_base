@@ -1,0 +1,9 @@
+- hosts: localhost
+  connection: local
+  sudo: yes
+  tasks:
+    - name: ghc/cabal-installのインストール
+      apt: name={{ item }}
+      with_items:
+        - ghc
+        - cabal-install
