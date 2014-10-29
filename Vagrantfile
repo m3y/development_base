@@ -7,6 +7,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty64"
   config.vm.network :forwarded_port, guest: 80, host: 8080, auto_correct: true
+  config.vm.boot_timeout = 300
   config.ssh.forward_agent = true
 
   config.vm.provider :virtualbox do |v|
@@ -19,5 +20,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     apt-add-repository ppa:ansible/ansible
     apt-get update
     apt-get install -y ansible
+    ansible-playbook /vagrant/base.yaml
   EOS
 end
