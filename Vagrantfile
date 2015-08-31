@@ -19,5 +19,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     apt-add-repository ppa:ansible/ansible
     apt-get update
     apt-get install -y ansible
+    apt-get install -y git
   EOS
 end
