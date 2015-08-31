@@ -6,3 +6,7 @@ development_base
 ```
 $ vagrant up
 ```
+
+注意事項
+--------
+VirtualBox 5.02 では起動できないバグがようなので、5.0以下のパッケージを利用する必要あり。
