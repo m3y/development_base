@@ -5,6 +5,8 @@ development_base
 ------------
 ```
 $ vagrant up
+### ssh の設定
+$ vagrant ssh-config --host development_base >> ~/.ssh/config
 ```
 
 注意事項
