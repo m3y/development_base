@@ -22,7 +22,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     apt-get install -y git
     apt-get install -y bash
     apt-get install -y ctags
-    git clone https://github.com/m3y/dotfiles.git
-    git clone https://github.com/m3y/playbooks.git
+    git clone https://github.com/m3y/dotfiles.git /home/vagrant/.ghq/github.com/m3y/dotfiles
+    git clone https://github.com/m3y/playbooks.git /home/vagrant/.ghq/github.com/m3y/playbooks
+    chown -R vagrant /home/vagrant/.ghq
   EOS
 end
