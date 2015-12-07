@@ -22,5 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     apt-get install -y git
     apt-get install -y bash
     apt-get install -y ctags
+    git clone https://github.com/m3y/dotfiles.git
+    git clone https://github.com/m3y/playbooks.git
   EOS
 end
